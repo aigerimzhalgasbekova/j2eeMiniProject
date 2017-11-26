@@ -26,7 +26,7 @@ private TodoService todoService = new TodoService();
 			}
 		}
 		
-		response.sendRedirect("/list-todo.do");
+		response.sendRedirect("/list-todos.do");
 	} 
 
 }

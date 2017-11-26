@@ -1,14 +1,17 @@
 package com.in28minutes.todo;
 
 public class Todo {
-	public Todo(String name) {
-		super();
-		this.name = name;
-		this.id = hashCode();
-	}
 
 	private String name;
+	private String category;
 	private int id;
+	
+	public Todo(String name, String category) {
+		super();
+		this.name = name;
+		this.category = category;
+		this.id = hashCode();
+	}
 
 	public String getName() {
 		return name;
@@ -18,6 +21,14 @@ public class Todo {
 		this.name = name;
 	}
 	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -25,10 +36,11 @@ public class Todo {
 	public void setId(int id) {
 		this.id = id;
 	}
+ 
 
 	@Override
 	public String toString() {
-		return "Todo [name=" + name + ", id=" + hashCode() +  "]";
+		return "Todo [name=" + name + ", category=" + category + ", id=" + id + "]";
 	}
 
 	@Override
