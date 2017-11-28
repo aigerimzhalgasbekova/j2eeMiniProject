@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class DeleteTodoServlet
- */
+/*
+ * DeleteTodoServlet deletes a todo when a user clicks on "delete" in front of it
+ * */
+
 @WebServlet("/delete-todo.do")
 public class DeleteTodoServlet extends HttpServlet {
 private TodoService todoService = new TodoService();
@@ -19,6 +20,8 @@ private TodoService todoService = new TodoService();
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		List<Todo> list = todoService.retrieveTodos();
+		
+		//id is used to delete a todo from the list
 		for (int i=0; i<list.size(); i++) {
 			if(list.get(i).hashCode()==Integer.parseInt(request.getParameter("id"))) {
 				todoService.delete(list.get(i));

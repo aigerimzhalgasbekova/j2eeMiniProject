@@ -10,6 +10,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+/*
+ * LoginRequiredFilter checks weather a user loged in or not
+ * if session gets name it continues the process
+ * otherwise the user sent to login page
+*/
 
 @WebFilter(urlPatterns = "*.do")
 public class LoginRequiredFilter implements Filter {

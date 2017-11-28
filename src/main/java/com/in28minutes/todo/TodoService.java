@@ -3,6 +3,12 @@ package com.in28minutes.todo;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * TodoService creates an initial todo list
+ * and provides methods for retrieving, adding 
+ * and deleting a todo.
+ * */
+
 public class TodoService {
 	private static List<Todo> todos = new ArrayList<Todo>();
 

@@ -1,5 +1,8 @@
 package com.in28minutes.todo;
 
+/*Todo class creates a new todo using name and category.
+ * It also generates an id for each todo*/
+
 public class Todo {
 
 	private String name;
